@@ -2,14 +2,24 @@ import './App.css';
 import React, {useState} from 'react';
 
 function App() {
-  var userName = "Alston";
+  var userName = "Emoji";
   var textColor = "red";
 
   const library = {
     "🍕": "Pizza",
     "🍔": "Burger",
     "🍟": "Fries",
-    "🌭": "HotDog"
+    "🌭": "HotDog",
+    "🍿": "Popcorn",
+    "🥓": "Bacon",
+    "🍨": "Ice-cream",
+    "🥞": "Pancake",
+    "🥖": "Baguette",
+    "🌮": "Taco",
+    "🥨": "Pretzel",
+    "🥐": "Croissant",
+    "🧇": "Waffle",
+    "🥯": "Bagel",
   };
   var fastFood = Object.keys(library);
   var [elem, setElem] = useState("");
@@ -28,13 +38,14 @@ function App() {
   return (
     <div className="App">
       <h1>
-        Hello <span style={{ color: textColor }}>{userName}</span>
+        <span style={{ color: textColor }}>{userName}</span> Dictionary
       </h1>
       <input onChange={handleChange}></input>
-      <div> input is: {elem}</div>
+      <div className='input'> input is: {elem}</div>
 
       <ul style={{ padding: 0 }}>
-        {fastFood.map((item) => {
+        {fastFood.map((item,index) => {
+          console.log(index);
           return (
             <li
               key={item}

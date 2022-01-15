@@ -3,4 +3,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgb(255, 189, 189);
+    height: 100vh;
+}
+input{
+    font-size: 20px;
+    height: 2rem;
+}
+.input{
+    font-size: 20px;
+}
+li{
+    cursor: pointer;
 }
